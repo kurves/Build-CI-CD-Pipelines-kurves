@@ -1,0 +1,29 @@
+---
+  - name: "install python."
+    become: true
+    raw: test -e /usr/bin/python3 || (apt -y update && apt install -y python3)
+    changed_when: false
+
+  - name: "update/upgrade packages." 
+    become: true
+    apt: 
+      upgrade: "yes"
+
+  - name: "Install Node.js 13"
+    shell: |
+      # Install Node.js
+      curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+      sudo apt-get install -y nodejs
+
+      # Use n version manager to use Node.js v13.8.0
+      sudo npm install -g n
+      sudo n 13.8.0
+
+ 
+
+  - name: "install pm2"
+    become: true
+    npm:
+      name: pm2
+      global: yes
+
