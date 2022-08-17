@@ -43,8 +43,8 @@
   - name: "start app"
     become: true
     shell: |
-      cd ~/
-      npm install 
+      cd ~/dist
+      
       sudo pm2 stop default
       sudo pm2 start main.js
       sudo pm2 start npm -- start
