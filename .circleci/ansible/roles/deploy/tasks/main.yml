@@ -2,7 +2,7 @@
   - name: "copy artifact"
     become: true
     copy:
-      src: backend/artifact.tar.gz
+      src: files/artifact.tar.gz
       dest: ~/
 
   - name: extract zipped artifact and install dependancies
