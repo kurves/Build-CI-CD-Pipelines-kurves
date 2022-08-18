@@ -8,7 +8,7 @@
   - name: extract zipped artifact and install dependancies
     become: true
     shell: |
-      tar -xvzf artifact.tar.gz
+      tar -xvzf ~/artifact.tar.gz
   
   - name: "Install Node.js 13"
     shell: |
