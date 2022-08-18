@@ -2,13 +2,13 @@
   - name: "copy artifact"
     become: true
     copy:
-      src: ~/artifact.tar.gz
+      src: ~/project/artifact.tar.gz
       dest: ~/
 
   - name: extract zipped artifact and install dependancies
     become: true
     shell: |
-      tar -xvzf ~/artifact.tar.gz
+      tar -xvzf artifact.tar.gz
   
   - name: "Install Node.js 13"
     shell: |

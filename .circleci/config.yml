@@ -365,10 +365,10 @@ jobs:
 
             cd ..
             tar -C backend -czvf artifact.tar.gz .
-            
+
             mkdir ~/project/.circleci/ansible/roles/deploy/files
             cp artifact.tar.gz ~/project/.circleci/ansible/roles/deploy/files/
-            #ls ~/project/.circleci/ansible/roles/deploy/files/
+            ls ~/project/.circleci/ansible/roles/deploy/files/
 
             cd .circleci/ansible
             echo "Contents  of the inventory.txt file is -------"
