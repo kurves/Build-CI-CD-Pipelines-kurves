@@ -1,15 +1,9 @@
 ---
-  - name: "copy artifact"
-    become: true
-    copy:
-      src: ~/project/.circleci/ansible/roles/deploy/files/artifact.tar.gz
-      dest: ~/
-
-  - name: extract zipped artifact and install dependancies
-    become: true
-    shell: |
-      tar -xvzf ~/artifact.tar.gz
-  
+  - name: "extract artifact"
+    unarchive:
+      src: ~/project/artifact.tar.gz
+      dest: /home/ubuntu
+ 
   - name: "Install Node.js 13"
     shell: |
       # Install Node.js
@@ -43,7 +37,7 @@
   - name: "start app"
     become: true
     shell: |
-      cd ~/project/dist
+      cd ~/
       
       sudo pm2 stop default
       sudo pm2 start main.js
