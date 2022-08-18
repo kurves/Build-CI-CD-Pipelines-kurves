@@ -1,18 +1,19 @@
 ---
   - name: "extract artifact"
+    become: yes
     unarchive:
-      src: ~/project/artifact.tar.gz
-      dest: /home/ubuntu
+      src: files/artifact.tar.gz
+      dest: .
  
-  - name: "Install Node.js 13"
-    shell: |
-      # Install Node.js
-      curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-      sudo apt-get install -y nodejs
+  # - name: "Install Node.js 13"
+  #   shell: |
+  #     # Install Node.js
+  #     curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+  #     sudo apt-get install -y nodejs
 
-      # Use n version manager to use Node.js v13.8.0
-      sudo npm install -g n
-      sudo n 13.8.0
+  #     # Use n version manager to use Node.js v13.8.0
+  #     sudo npm install -g n
+  #     sudo n 13.8.0
  
   
   - name: "install pm2"
@@ -20,19 +21,23 @@
     npm:
       name: pm2
       global: yes
+      state: latest
       production: yes
-      state: present 
+     
 
   - name: "Installing Node Dependencies"
     become: true
-    shell: |
-      npm install
+    apt: 
+      name: ['nodejs', 'npm']
+      state: latest
+      update_cache: yes
+      
 
   - name: "start app"
     become: true
     shell: |
-      sudo pm2 stop default
-      sudo pm2 start npm -- start
+      pm2 stop all
+      pm2 start npm -- start
     
 
 
