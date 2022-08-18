@@ -336,7 +336,7 @@ jobs:
                     
   deploy-backend:
     docker:
-      - image: cimg/python:3.10
+      - image: cimg/python:3.10-alpine3.16
     steps:
       - checkout
       - install_ansible
@@ -352,9 +352,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            npm install pm2
-            npm install
-            npm install curl
+            apk add --update --no-cache tar gzip nodejs pm2 npm tree aws-cli ansible curl rsync openssh
 
       - run:
           name: Deploy  backend
