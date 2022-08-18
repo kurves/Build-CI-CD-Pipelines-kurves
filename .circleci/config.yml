@@ -375,10 +375,7 @@ jobs:
             export TYPEORM_ENTITIES=./modules/domain/**/*.entity{.ts,.js}
             export TYPEORM_MIGRATIONS=./migrations/*.ts
 
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - ~/
+    
 
       - destroy-environment
       - revert-migrations   
