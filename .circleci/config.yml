@@ -352,7 +352,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            pip install --no-cache gzip nodejs pm2 npm tree aws-cli ansible curl rsync openssh
+            npm install gzip pm2 tree curl rsync openssh
 
       - run:
           name: Deploy  backend
