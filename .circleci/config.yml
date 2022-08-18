@@ -298,7 +298,6 @@ jobs:
       - image: "cimg/python:3.10"
     steps:
       - checkout
-      
       - install_nodejs
       - install_awscli
       - install_ansible 
@@ -366,30 +365,20 @@ jobs:
 
             cd ..
             tar -C backend -czvf artifact.tar.gz .
-            mkdir ~/project/.circleci/ansible/roles/deploy/files
-            cp artifact.tar.gz ~/project/.circleci/ansible/roles/deploy/files/
-            ls ~/project/.circleci/ansible/roles/deploy/files/
-            
-  
-            export TYPEORM_MIGRATIONS_DIR=./migrations
-            export TYPEORM_ENTITIES=./modules/domain/**/*.entity{.ts,.js}
-            export TYPEORM_MIGRATIONS=./migrations/*.ts
-
-
-
             cd .circleci/ansible
             echo "Contents  of the inventory.txt file is -------"
             cat inventory.txt
             ansible-playbook -i inventory.txt deploy-backend.yml
      
             
-            
-            
+            export TYPEORM_MIGRATIONS_DIR=./migrations
+            export TYPEORM_ENTITIES=./modules/domain/**/*.entity{.ts,.js}
+            export TYPEORM_MIGRATIONS=./migrations/*.ts
 
       - persist_to_workspace:
           root: ~/
           paths:
-            - project/artifact.tar.gz
+            - /artifact.tar.gz
 
       - destroy-environment
       - revert-migrations   
