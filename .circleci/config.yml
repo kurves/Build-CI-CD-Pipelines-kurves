@@ -378,7 +378,7 @@ jobs:
       - persist_to_workspace:
           root: ~/
           paths:
-            - /artifact.tar.gz
+            - ~/artifact.tar.gz
 
       - destroy-environment
       - revert-migrations   
