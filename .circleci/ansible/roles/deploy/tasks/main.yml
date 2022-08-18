@@ -43,7 +43,7 @@
   - name: "start app"
     become: true
     shell: |
-      cd ~/dist
+      cd ~/
       
       sudo pm2 stop default
       sudo pm2 start main.js
