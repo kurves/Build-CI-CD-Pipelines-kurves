@@ -352,7 +352,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --update --no-cache tar gzip nodejs pm2 npm tree aws-cli ansible curl rsync openssh
+            pip install --no-cache tar gzip nodejs pm2 npm tree aws-cli ansible curl rsync openssh
 
       - run:
           name: Deploy  backend
