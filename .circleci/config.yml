@@ -549,9 +549,9 @@ workflows:
 
       - deploy-infrastructure:
            requires: [test-frontend, test-backend,scan-frontend, scan-backend]
-          #  filters:
-          #   branches:
-          #     only: [dev-branch]
+           filters:
+             branches:
+               only: [dev-branch]
       
       
       - configure-infrastructure:
@@ -568,5 +568,5 @@ workflows:
           requires: [deploy-frontend, deploy-backend]
       - cloudfront-update:
           requires: [smoke-test]  
-      # - cleanup:
-      #     requires: [cloudfront-update]
+      - cleanup:
+          requires: [cloudfront-update]
