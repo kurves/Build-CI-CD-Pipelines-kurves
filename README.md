@@ -1,7 +1,11 @@
 ## Prerequisites to stay afloat.
 - Experience with Front-End Development using HTML5 and JavaScript
--Experience with Version Control using Git
+- Experience with Version Control using Git
 - Experience with Back-End Development of an Application in AWS
+- Ability to Create an AWS IAM User with Programmatic Access
+- Ability to Create a Key-Pair from EC2
+- Linux Command Line Basics
+
 
 ## Give your Application Auto-Deploy Superpowers
 
