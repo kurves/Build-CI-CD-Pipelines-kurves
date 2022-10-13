@@ -34,6 +34,10 @@ In this project, you will prove your mastery of the following learning objective
 - Benefits of CI/CD
 - Continuous Delivery as a Paradigm
 
+- CI/CD Best Practices
+- Deployment Strategies
+- Pipeline Building Blocks and Jobs
+- CI/CD Tools
 * [Getting Started](instructions/1-getting-started.md)
 * [Deploying Working, Trustworthy Software](instructions/2-deploying-trustworthy-code.md)
 * [Configuration Management](instructions/3-configuration-management.md)
