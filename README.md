@@ -5,8 +5,8 @@
 - Ability to Create an AWS IAM User with Programmatic Access
 - Ability to Create a Key-Pair from EC2
 - Linux Command Line Basics
-
-
+- Create a PostgreSQL Database in Amazon RDS with a Public IP Address
+- Create and Use a Local PostgreSQL Database (either Installed or with Docker Compose)
 ## Give your Application Auto-Deploy Superpowers
 
 In this project, you will prove your mastery of the following learning objectives:
