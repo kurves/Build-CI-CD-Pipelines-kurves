@@ -7,6 +7,14 @@
 - Linux Command Line Basics
 - Create a PostgreSQL Database in Amazon RDS with a Public IP Address
 - Create and Use a Local PostgreSQL Database (either Installed or with Docker Compose)
+
+## Tools, Environments & Dependencies
+- cloud-based tools
+- Github
+- Circle CI
+- Amazon AWS
+
+
 ## Give your Application Auto-Deploy Superpowers
 
 In this project, you will prove your mastery of the following learning objectives:
