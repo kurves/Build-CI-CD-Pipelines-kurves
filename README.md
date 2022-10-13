@@ -29,6 +29,11 @@ In this project, you will prove your mastery of the following learning objective
 ### Instructions
 
 * [Selling CI/CD](instructions/0-selling-cicd.md)
+
+- Fundamentals of CI/CD
+- Benefits of CI/CD
+- Continuous Delivery as a Paradigm
+
 * [Getting Started](instructions/1-getting-started.md)
 * [Deploying Working, Trustworthy Software](instructions/2-deploying-trustworthy-code.md)
 * [Configuration Management](instructions/3-configuration-management.md)
