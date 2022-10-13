@@ -1,7 +1,7 @@
-We are archiving this repository because we do not want learners to push personal development to the current repository. If you have any issues or suggestions to make, feel free to:
-- Utilize the https://knowledge.udacity.com/ forum to seek help on content-specific issues.
-- [Submit a support ticket](https://udacity.zendesk.com/hc/en-us/requests/new) along with the link to your forked repository. 
-- If you are an enterprise learner, please [Submit a support ticket here](https://udacityenterprise.zendesk.com/hc/en-us/requests/new?ticket_form_id=360000279131)
+## Prerequisites to stay afloat.
+- Experience with Front-End Development using HTML5 and JavaScript
+-Experience with Version Control using Git
+- Experience with Back-End Development of an Application in AWS
 
 ## Give your Application Auto-Deploy Superpowers
 
